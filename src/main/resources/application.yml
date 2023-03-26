@@ -1,0 +1,38 @@
+#spring
+spring:
+  application:
+    name: code-helper
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/code_helper?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+  freemarker:
+    suffix: .ftl
+    template-loader-path: classpath:/template/
+#mybatis-plus配置
+mybatis-plus:
+  configuration:
+    auto-mapping-behavior: FULL
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#code-helper配置
+code:
+  db:
+    database: code_helper
+    ignoreFiledList:
+      - id
+      - enable
+      - deleted
+      - modify_user
+      - create_time
+      - create_user
+      - modify_time
+  maven:
+    groupId: "com.it.shw"
+    artifactId: "demo"
+  project:
+    desFolder: "D:\\code\\demo-project"
+    author: "shw"
+    whiteList:
+      - author.ftl
